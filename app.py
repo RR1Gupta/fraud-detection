@@ -10,7 +10,7 @@ st.set_page_config(page_title="Credit Card Fraud Detection", page_icon="💳", l
 
 @st.cache_resource
 def load_model():
-    return joblib.load("model/fraud_model.joblib")
+    return joblib.load("fraud_model.joblib")
 
 
 @st.cache_data
