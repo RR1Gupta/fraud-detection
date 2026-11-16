@@ -1,0 +1,67 @@
+{
+  "dataset_source": "ULB Credit Card Fraud Detection dataset (Kaggle / OpenML)",
+  "rows_raw": 284807,
+  "rows_after_dedup": 283726,
+  "duplicates_removed": 1081,
+  "missing_values": 0,
+  "n_fraud": 473,
+  "fraud_percent": 0.167,
+  "train_rows": 226980,
+  "test_rows": 56746,
+  "eda": {
+    "top_correlated_features": {
+      "V17": -0.313,
+      "V14": -0.293,
+      "V12": -0.251,
+      "V10": -0.207,
+      "V16": -0.187,
+      "V3": -0.182,
+      "V7": -0.172,
+      "V11": 0.149,
+      "V4": 0.129,
+      "V18": -0.105
+    },
+    "median_amount_legit": 22.0,
+    "median_amount_fraud": 9.82
+  },
+  "models": [
+    {
+      "model": "Logistic Regression",
+      "precision": 0.0562,
+      "recall": 0.8737,
+      "f1": 0.1057,
+      "roc_auc": 0.9658,
+      "pr_auc": 0.6719
+    },
+    {
+      "model": "Random Forest (baseline)",
+      "precision": 0.9054,
+      "recall": 0.7053,
+      "f1": 0.7929,
+      "roc_auc": 0.9557,
+      "pr_auc": 0.7848
+    },
+    {
+      "model": "Random Forest (tuned)",
+      "precision": 0.9571,
+      "recall": 0.7053,
+      "f1": 0.8121,
+      "roc_auc": 0.9484,
+      "pr_auc": 0.8002
+    }
+  ],
+  "best_model": "Random Forest (tuned)",
+  "best_params": {
+    "max_depth": 14,
+    "min_samples_leaf": 2
+  },
+  "cv_pr_auc": 0.8182,
+  "confusion_matrix": {
+    "tn": 56648,
+    "fp": 3,
+    "fn": 28,
+    "tp": 67
+  },
+  "demo_mode": false,
+  "runtime_seconds": 557
+}
